@@ -1,0 +1,362 @@
+$body-color: #000;
+$orange-color:#DC4405;
+$v3b1: (
+btn-bg:$orange-color,
+btn-txt:#000,
+btn-bg-hvr:#000,
+btn-brdr:$orange-color,
+input-plchldr:#000,
+input-txt:#000,
+input-brdr:#000,
+input-bg:rgba(255,255,255,0.5)
+);
+$v3b1-m: (
+	btn-bg:$orange-color,
+	btn-txt:#000,
+	btn-bg-hvr:#000,
+	btn-brdr:$orange-color,
+	input-plchldr:#fff,
+	input-txt:#fff,
+	input-brdr:#fff,
+	input-bg:rgba(255,255,255,0.1)
+);
+$v3n: (
+	btn-bg:$orange-color,
+	btn-txt:#000,
+	btn-bg-hvr:#000,
+	btn-brdr:$orange-color,
+	input-plchldr:#fff,
+	input-txt:#fff,
+	input-brdr:#fff,
+	input-bg:rgba(255,255,255,0.1)
+);
+$modal: (
+	btn-bg:$orange-color,
+	btn-txt:#000,
+	btn-bg-hvr:#000,
+	btn-brdr:$orange-color,
+);
+@import '_partial1'; /*brings the mixings in*/
+
+.page-wrap{
+	overflow:hidden;
+}
+body {
+ color: $body-color;
+}
+.v3-wrap{
+	text-align: center;
+	.lmlp-cta-wrap input{
+		text-transform: uppercase;
+		font-size: 0.9em;
+		&#gform_submit_button_5.button{
+			font-size: 0.9em;
+		}
+		
+	}
+	.strong{
+		font-weight: 800;
+	}
+	.sub-header{
+		display: block;
+		font-weight: 400;
+		font-size: 0.8em;
+	}
+	h1{
+		@include h_resize(4rem, 1100px 868px 588px 540px 490px 445px 409px 385px 358px);
+		}
+		h2{
+			@include h_resize(3.6rem, 1295px 1187px 868px 700px 600px 510px 469px 435px 410px);
+			}
+			h3{
+				@include h_resize(3.2rem, 1100px 868px 700px 600px 500px 450px 400px);
+				}
+		h1,h2{
+			color: $orange-color;	
+			.sub-header{
+				display: block;
+				font-weight: 400;
+				font-size: 0.8em;
+				color: #fff;
+			}
+		}
+		h2, h3{
+			font-weight: 800;
+		}
+		.orange-background{
+			background-color: $orange-color;
+			color:#fff;
+			h2{
+				color: #fff;
+			}
+		}
+		.color-rectangle {
+			@extend %desktop-only;
+			background-color: $orange-color;
+			height: 2px;
+			margin: 1rem auto;
+			&.color-rectangle__full-width{
+				width: 86%;
+			}
+		}
+		.orange-text{
+			color:$orange-color;
+		}
+		@include tablet_style{
+			@include absolute_box('.mobile-absolute-box',0,50%,-50% 0){
+				width: 95%;
+				@include max_style(388px){
+					h1{
+						margin-top: 0.5rem;
+						margin-bottom: 0.5rem;
+					}
+					p{
+						margin-top: 0.5rem;
+					}
+					font-size: 0.9em;
+				}
+			}
+		}
+}
+.v3-m{
+	@include m_section();
+}
+.v3-t-wrap{
+	@include desktop_style{
+		.half-bg-img-t{
+			@include background_set(center,contain);
+		}
+	}
+}
+.v3-q-1{
+	.hero-logo {
+		margin: auto auto 1rem auto;
+		width: 70%;
+		max-width: 300px;
+	}
+}
+.v3-b-2 {
+	.hero-logo {
+		margin: auto auto 1rem auto;
+		width: 70%;
+		max-width: 300px;
+	}
+	.cta-top-message{
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+	@include desktop_style{
+		@include button_style ($v3b1);
+	@include input_box_style ($v3b1,$stacked:true);
+		.lmlp-cta-wrap{
+			margin: auto;
+			max-width: 450px;
+		}
+		h1+p{
+			max-width: 400px;
+			margin: auto;
+		}
+		.cta-top-message{
+			color: #fff;
+			margin-top: 2rem;
+			.cta-top-discount{
+				color:#fff;
+			}
+		}
+		.v3-b-inner-content {
+			text-align: center;
+			max-width: 530px;
+		}
+		.v3-b-top-content{
+			color: #fff;
+		}
+		.v3-b-bottom-content{
+			max-width: 400px;
+			margin: auto;
+		}
+	}
+	@include tablet_style{
+		background-color: #000;
+		@include button_style ($v3b1-m);
+	@include input_box_style ($v3b1-m);
+		.cta-top-message{
+			color: $orange-color;
+			margin-top: 1rem;
+		}
+		.mobile-absolute-box p {
+			color: #fff;
+		}
+	}
+}
+.v3-m-2 {
+	.big-image{
+		max-width: 1200px;
+	}
+}
+.v3-q-3{
+	.hero-logo {
+		margin: auto auto 1rem auto;
+		width: 70%;
+		max-width: 300px;
+	}
+}
+.v3-e-4{
+	margin: 3% auto;
+	img{
+		margin: auto;
+	}
+}
+.v3-d-6{
+	@include desktop_style{
+		img {
+			max-height: 400px;
+			margin: auto;
+		}
+		.two-items {
+			margin: 2rem auto;
+		li:first-child{
+			border-right:2px solid $orange-color;
+		}
+	}
+	}
+	@include tablet_style{
+		img {
+			max-height: 300px;
+			margin: auto;
+		}
+		.two-items {
+			margin: 2rem auto;
+		li:first-child .normal-page{
+			border-bottom:2px solid $orange-color;
+		}
+	}
+}
+}
+.v3-t-8-wrap {
+	@include t_section($l-width: 87% 1400px auto,$text-basis:55%, $img-basis:40%,$mobile-direction:column-reverse,$no_padding:false);
+}
+.v3-m-9{
+	@include m_section($width:1300px 90%);
+	@include desktop_style{
+		margin-bottom: -5rem;
+	}
+	@include tablet_style{
+		margin-bottom: -3.5rem;
+	}
+}
+.v3-m-10{
+ @include desktop_style{
+	 padding-top: 5rem;
+	 margin-bottom: 12rem;
+	 .big-image{
+		 max-width: 1100px;
+		 .ma{
+			 margin-top: -12rem;
+			 position: relative;
+			 top: 12rem;
+		 }
+	 }
+ }
+ @include tablet_style{
+	padding-top: 3rem;
+	margin-bottom: 5rem;
+	.ma{
+		margin-top: -5rem;
+		position: relative;
+		top: 5rem;
+		width: 90%;
+		max-width: 400px;
+	}
+ }
+}
+.v3-t-13-wrap{
+	@include t_section($text-basis:45%,$img-basis:55%,$mobile-direction:column-reverse);
+	@include desktop_style{
+		margin: 9% 0 7% 0;
+		.v3-l{
+		.half-bg-inner-t{
+			padding: 0 1rem 27em 1rem;
+			@include absolute_box('.sct-12-backpack',auto,50%,-50% 0){
+				bottom: -10em;
+				width: 75%;
+				max-width: 500px;
+			}
+		}
+		.half-bg-img-t{
+			margin: -5rem 0;
+		}
+	}
+	}
+	@include max_min_style(1295px){
+		.v3-l{
+		.half-bg-inner-t .sct-12-backpack{
+			bottom: -5rem;
+		}
+	}
+	}
+	@include max_min_style(1130px){
+		.v3-l{
+		.half-bg-inner-t .sct-12-backpack{
+			bottom: 0;
+		}
+	}
+	}
+}
+.v3-m-15{
+	@include desktop_style {
+		position: relative;
+		z-index: 1;
+		margin-bottom: -3rem;
+		.big-image{
+			max-width: 600px;
+		}
+	}
+}
+.v3-t-16-wrap{
+	@include t_section($l-width:90% 1200px auto,$mobile-direction:column-reverse);
+	@include desktop_style{
+		.half-bg-inner-t{
+			padding: 5% 1rem;
+		}
+		.half-bg-img-t{
+			max-height: 750px;
+		}
+	}
+	@include tablet_style{
+		.half-bg-inner-t{
+			padding: 0;
+		}
+		.sct-16-img{
+			padding-left: 1rem;
+			padding-right: 1rem;
+			position: relative;
+			top:-3rem;
+		}
+		video {
+			max-width: 100%;
+		}
+		p{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.v3-n:last-child {
+	@include button_style ($v3n);
+	@include input_box_style ($v3n);
+	@include n_content (#fff);
+}
+.modal {
+	.modal-inner {
+		.modal-text {
+			h2 {
+				font-size: 2.3rem !important;
+			}
+			h2,
+			p {
+				color: #323438 !important;
+			}
+		}
+	}
+	@include button_style ($modal,false);
+}

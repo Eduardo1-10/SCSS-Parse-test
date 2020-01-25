@@ -1,0 +1,14 @@
+{
+  "name": "scssparse",
+  "version": "1.0.0",
+  "description": "Getting scss top lvl selectors",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "open": "^7.0.0"
+  }
+}
